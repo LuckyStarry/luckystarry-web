@@ -1,0 +1,72 @@
+language: node_js
+node_js:
+  - '6'
+  - '7'
+  - '8'
+  - 'node'
+  - 'lts/*'
+install:
+  - npm install
+env:
+  global:
+    secure: 'COOCKB/ToruVLhY62Uk83MDala5Y7xvafMOFEXxhH9vvefSkBvl1DR6pqw0uzEMki1kxPPZ5kOr41N6Zfh2BcXhFpCEqIq1a1XcsJ72MB8uGB0rpW6fAnUhkHIaAH/tz3Y2H5c+FdJF7GEGtlfvI+Pu++DeU7z3jbocml0Gvi72hGSDmAglEYF8GhYOdJEOa7ugp7EGYVhgIFbO5TsUvD+F52sfm1jmYHGWv/PoiIYk2heHQNr1wL/uWD9AZ1FhExriu8S4rYF5PjHpFYo4dE9dBTeIsSA/+QGIYAmisFO0om2NqT6ViYgGGwIwFinM8Ho+V4zDeWuS8WVtfCD/XuZJCOYDK39FIwTA9M2Wa3GsovNNIQ4kt/CouMYupwQep6Q7a/86Mr11frHqXWMvSMOGEJWPVv3uZzyxcCVkth3F4MQ6LVSNkNpXnWjf828PsNLBz8b1kt9yxo+uEUNVhUV7ixSasBvowDwtxc8+UTX/dTvqEKF8Uweui9CgeyZBxUS9Z8EY9EKbocZCIylaadYjcCHf7zLY342X1Rcz3nujtDYT+OIPkgRqllMGJ/9/Nhc9TEGBt/oTOwXKCe51wAFAW3cWcYw26Buz/gM5EhdygM6SotNJ64SIlZhVpal8iNrrwNfjWSvIorspgUxaei9+kIOFq+LbRpnEwLTP2wJI='
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - node --version
+        - npm --version
+        - echo "Testing Started ..."
+        - npm test
+        - echo "Testing Finished."
+      after_success:
+        - npm run coverage
+
+    - stage: tagged-prerelease
+      if: tag =~ ^v\d+\.\d+\.\d+-.*$
+      deploy:
+        provider: releases
+        api_key: '$GH_TOKEN'
+        skip_cleanup: false
+        on:
+          tags: true
+        prerelease: true
+
+    - stage: npm-prerelease
+      if: tag =~ ^v\d+\.\d+\.\d+-.*$
+      script:
+        - echo "NPM Deploying Started ..."
+        - npm run build
+        - echo "NPM Building Finished."
+      deploy:
+        provider: npm
+        email: starry@vip.qq.com
+        api_key: '$NPM_TOKEN'
+        skip_cleanup: true
+        tag: beta
+        on:
+          tags: true
+
+    - stage: tagged-release
+      if: tag =~ ^v\d+\.\d+\.\d+$
+      deploy:
+        provider: releases
+        api_key: '$GH_TOKEN'
+        skip_cleanup: false
+        on:
+          tags: true
+
+    - stage: npm-release
+      if: tag =~ ^v\d+\.\d+\.\d+$
+      script:
+        - echo "NPM Deploying Started ..."
+        - npm run build
+        - echo "NPM Building Finished."
+      deploy:
+        provider: npm
+        email: starry@vip.qq.com
+        api_key: '$NPM_TOKEN'
+        skip_cleanup: true
+        on:
+          tags: true

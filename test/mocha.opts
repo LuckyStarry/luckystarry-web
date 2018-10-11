@@ -1,0 +1,5 @@
+--require ts-node/register
+--bail
+--recursive
+--no-timeouts
+./test/**/*.spec.ts

@@ -1,0 +1,48 @@
+{
+  "name": "luckystarry-web",
+  "version": "0.0.1",
+  "description": "一个轻量的类似 ASP.NET 的 WEB服务",
+  "keywords": [
+    "web"
+  ],
+  "scripts": {
+    "clean": "del-cli dist -f",
+    "lint": "tslint -p . -c tslint.json 'src/**/*.ts'",
+    "prebuild": "npm run clean && npm run lint",
+    "build": "tsc",
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "main": "dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh:git@github.com:LuckyStarry/luckystarry-web.git"
+  },
+  "bugs": {
+    "email": "starry@vip.qq.com",
+    "url": "https://github.com/LuckyStarry/luckystarry-web/issues"
+  },
+  "author": {
+    "name": "SUN BO",
+    "email": "starry@vip.qq.com",
+    "url": "https://www.luckystarry.com"
+  },
+  "dependencies": {
+    "luckystarry-collections": "^0.1.1",
+    "luckystarry-ioc": "^0.1.0",
+    "typescript": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.11.7",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "del-cli": "^1.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1"
+  }
+}
