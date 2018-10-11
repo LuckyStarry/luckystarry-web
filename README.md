@@ -4,7 +4,7 @@
 
 [![Build Status](https://www.travis-ci.org/LuckyStarry/luckystarry-web.svg?branch=master)](https://www.travis-ci.org/LuckyStarry/luckystarry-web?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/LuckyStarry/luckystarry-web/badge.svg?branch=master)](https://coveralls.io/github/LuckyStarry/luckystarry-web?branch=master)
-[![codebeat badge](https://codebeat.co/badges/6339b0a3-d394-4706-b283-b8bfc6acd0dc)](https://codebeat.co/projects/github-com-luckystarry-luckystarry-web-master)
+[![codebeat badge](https://codebeat.co/badges/a1b48850-cd7c-470f-a309-7b9dacb0a10d)](https://codebeat.co/projects/github-com-luckystarry-luckystarry-web-master)
 [![License Status](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://raw.githubusercontent.com/LuckyStarry/luckystarry-web/master/LICENSE)
 
 ## WARNING
