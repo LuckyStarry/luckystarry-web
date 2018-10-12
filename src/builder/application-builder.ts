@@ -1,20 +1,21 @@
-import { IServiceProvider } from './service-provider'
 import { RequestDelegate } from './request-delegate'
+import { IServiceProvider } from '../utils'
 
-export abstract class IApplicationBuilder {
-  public abstract set ApplicationServices(value: IServiceProvider)
-  public abstract get ApplicationServices(): IServiceProvider
-
-  public abstract Use(
+export interface IApplicationBuilder {
+  ApplicationServices: IServiceProvider
+  Use(
     middleware: (request: RequestDelegate) => RequestDelegate
   ): IApplicationBuilder
-
-  public abstract Build(): RequestDelegate
+  Build(): RequestDelegate
 }
 
 export class ApplicationBuilder implements IApplicationBuilder {
   private applicationServices: IServiceProvider
   private middlewares: Array<(request: RequestDelegate) => RequestDelegate> = []
+
+  public constructor(serviceProvider: IServiceProvider) {
+    this.ApplicationServices = serviceProvider
+  }
 
   public Use(
     middleware: (request: RequestDelegate) => RequestDelegate

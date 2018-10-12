@@ -1,11 +1,9 @@
 import { IDictionary, Dictionary } from 'luckystarry-collections'
 import { HttpRequest, RequestMessage } from './http-request'
 import { HttpResponse, ResponseMessage } from './http-response'
-import { IHttpHandler } from './http-handler'
 export class HttpContext {
   private request: HttpRequest
   private response: HttpResponse
-  private handler: IHttpHandler
   public items: IDictionary<string, any>
 
   public constructor(payload: {
@@ -26,14 +24,6 @@ export class HttpContext {
 
   public get Response(): HttpResponse {
     return this.response
-  }
-
-  public get Handler(): IHttpHandler {
-    return this.handler
-  }
-
-  public RemapHandler(handler: IHttpHandler) {
-    this.handler = handler
   }
 
   public get Items(): IDictionary<string, any> {

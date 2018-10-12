@@ -1,6 +1,6 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { HttpRequest, RequestMessage } from '../../src/web/http-request'
+import { HttpRequest, RequestMessage } from '../../src/http/http-request'
 
 describe('/web/http-request.ts', function() {
   it('存在 Class HttpRequest', function() {

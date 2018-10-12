@@ -1,6 +1,6 @@
 import { IRouter } from './router'
-import { IApplicationBuilder } from '../../application-builder'
 import { RouterMiddleware } from './router-middleware'
+import { IApplicationBuilder } from '../builder'
 
 export class RoutingBuilder {
   public static UseRouter(

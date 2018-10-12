@@ -1,7 +1,7 @@
 /* tslint:disable */
 import { expect } from 'chai'
 import { Injectable, ServiceCollection } from 'luckystarry-ioc'
-import { ServiceProvider } from '../src/service-provider'
+import { ServiceProvider } from '../src/utils'
 
 describe('/service-provider.ts', function() {
   it('存在 Class ServiceProvider', function() {

@@ -1,8 +1,8 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { HttpContext } from '../../src/web/http-context'
-import { RequestMessage } from '../../src/web/http-request'
-import { ResponseMessage } from '../../src/web/http-response'
+import { HttpContext } from '../../src/http/http-context'
+import { RequestMessage } from '../../src/http/http-request'
+import { ResponseMessage } from '../../src/http/http-response'
 
 describe('/web/http-context.ts', function() {
   it('存在 Class EventHandler', function() {

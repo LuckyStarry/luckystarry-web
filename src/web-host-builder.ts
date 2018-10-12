@@ -1,6 +1,6 @@
 import { ServiceCollection } from 'luckystarry-ioc'
 import { IWebHost, LuckyStarryWebHost } from './web-host'
-import { ApplicationBuilder } from './application-builder'
+import { ApplicationBuilder } from './builder'
 import { isFunction } from './utils'
 
 export abstract class IWebHostBuilder {
@@ -20,7 +20,7 @@ export class WebHostBuilder implements IWebHostBuilder {
 
   public Build(): IWebHost {
     let services = new ServiceCollection()
-    let app = new ApplicationBuilder()
+    let app = new ApplicationBuilder(services)
     app.ApplicationServices = services
 
     if (this.startUp) {

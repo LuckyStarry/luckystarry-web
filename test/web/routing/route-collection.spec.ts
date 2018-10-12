@@ -3,9 +3,9 @@ import { expect } from 'chai'
 import { IRouter } from '../../../src/web/routing/router'
 import { RouteCollection } from '../../../src/web/routing/route-collection'
 import { RouteContext } from '../../../src/web/routing/route-context'
-import { HttpContext } from '../../../src/web/http-context'
-import { RequestMessage } from '../../../src/web/http-request'
-import { ResponseMessage } from '../../../src/web/http-response'
+import { HttpContext } from '../../../src/http/http-context'
+import { RequestMessage } from '../../../src/http/http-request'
+import { ResponseMessage } from '../../../src/http/http-response'
 import { RouteData } from '../../../src/web/routing/route-data'
 
 describe('/web/routing/route-collection.ts', function() {

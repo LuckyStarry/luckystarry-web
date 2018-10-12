@@ -1,8 +1,8 @@
-import { IServiceProvider } from '../../service-provider'
-import { IApplicationBuilder } from '../../application-builder'
 import { IRouter } from './router'
 import { RouteCollection } from './route-collection'
 import { IList, List } from 'luckystarry-collections'
+import { IServiceProvider } from '../utils'
+import { IApplicationBuilder } from '../builder'
 
 export abstract class IRouteBuilder {
   public abstract get ApplicationBuilder(): IApplicationBuilder

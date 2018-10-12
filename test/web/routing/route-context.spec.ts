@@ -1,8 +1,8 @@
 /* tslint:disable */
 import { expect } from 'chai'
 import { RouteContext } from '../../../src/web/routing/route-context'
-import { HttpContext } from '../../../src/web/http-context'
-import { RequestMessage } from '../../../src/web/http-request'
+import { HttpContext } from '../../../src/http/http-context'
+import { RequestMessage } from '../../../src/http/http-request'
 import { ResponseMessage } from '../../../src/web/http-response'
 import { RouteData } from '../../../src/web/routing/route-data'
 

@@ -1,5 +1,3 @@
-import http from 'http'
-
 export interface RequestMessage {
   readonly url?: string
   readonly method?: string

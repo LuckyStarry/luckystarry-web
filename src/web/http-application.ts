@@ -1,6 +1,6 @@
 import http from 'http'
 import { IHttpModule } from './http-module'
-import { HttpContext } from './http-context'
+import { HttpContext } from '../http'
 import { EventHandler } from '../event-handler'
 import { PayloadEventArgs } from '../payload-event-args'
 
@@ -24,7 +24,7 @@ export class HttpApplication {
         eventArgs.Payload = httpContext
         this.PostResolveRequestCache.Trigger(this, eventArgs)
         this.PreRequestHandlerExecute.Trigger(this, eventArgs)
-        httpContext.Handler.ProcessRequest(httpContext)
+        //httpContext.Handler.ProcessRequest(httpContext)
         this.PostRequestHandlerExecute.Trigger(this, eventArgs)
       }
     )

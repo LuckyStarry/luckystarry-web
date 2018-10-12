@@ -1,5 +1,3 @@
-import http from 'http'
-
 export interface ResponseMessage {
   write(content: string)
   end()

@@ -1,7 +1,7 @@
-import { RequestDelegate } from '../../request-delegate'
+import { RequestDelegate } from '../builder'
 import { IRouter } from './router'
 import { RouteContext } from './route-context'
-import { HttpContext } from '../http-context'
+import { HttpContext } from '../http'
 
 export class RouterMiddleware {
   private readonly next: RequestDelegate

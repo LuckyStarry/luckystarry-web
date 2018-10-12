@@ -1,8 +1,4 @@
-import ioc, {
-  Injectable,
-  IServiceCollection,
-  ServiceCollection
-} from 'luckystarry-ioc'
+import { IServiceCollection, ServiceCollection } from 'luckystarry-ioc'
 
 export abstract class IServiceProvider {
   public abstract GetService<T>(type: { new (...args: Array<any>): T }): T

@@ -1,6 +1,6 @@
-import { HttpContext } from '../http-context'
+import { HttpContext } from '../http'
+import { RequestDelegate } from '../builder'
 import { RouteData } from './route-data'
-import { RequestDelegate } from '../../request-delegate'
 
 export class RouteContext {
   private httpContext: HttpContext
