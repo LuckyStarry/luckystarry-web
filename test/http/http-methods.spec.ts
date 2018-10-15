@@ -49,6 +49,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsConnect('CONNECT')).is.true
     expect(HttpMethods.IsConnect('CONNECT ')).is.false
     expect(HttpMethods.IsConnect('1CONNECT')).is.false
+    expect(HttpMethods.IsConnect('')).is.false
+    expect(HttpMethods.IsConnect(null)).is.false
+    expect(HttpMethods.IsConnect(undefined)).is.false
   })
 
   it('HttpMethods.IsDelete => 正常', function() {
@@ -57,6 +60,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsDelete('DELETE')).is.true
     expect(HttpMethods.IsDelete('DELETE ')).is.false
     expect(HttpMethods.IsDelete('1DELETE')).is.false
+    expect(HttpMethods.IsDelete('')).is.false
+    expect(HttpMethods.IsDelete(null)).is.false
+    expect(HttpMethods.IsDelete(undefined)).is.false
   })
 
   it('HttpMethods.IsGet => 正常', function() {
@@ -65,6 +71,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsGet('GET')).is.true
     expect(HttpMethods.IsGet('GET ')).is.false
     expect(HttpMethods.IsGet('1get')).is.false
+    expect(HttpMethods.IsGet('')).is.false
+    expect(HttpMethods.IsGet(null)).is.false
+    expect(HttpMethods.IsGet(undefined)).is.false
   })
 
   it('HttpMethods.IsHead => 正常', function() {
@@ -73,6 +82,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsHead('HEAD')).is.true
     expect(HttpMethods.IsHead('HEAD ')).is.false
     expect(HttpMethods.IsHead('hear')).is.false
+    expect(HttpMethods.IsHead('')).is.false
+    expect(HttpMethods.IsHead(null)).is.false
+    expect(HttpMethods.IsHead(undefined)).is.false
   })
 
   it('HttpMethods.IsOptions => 正常', function() {
@@ -81,6 +93,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsOptions('OPTIONS')).is.true
     expect(HttpMethods.IsOptions('OPTIONS ')).is.false
     expect(HttpMethods.IsOptions('OPTION')).is.false
+    expect(HttpMethods.IsOptions('')).is.false
+    expect(HttpMethods.IsOptions(null)).is.false
+    expect(HttpMethods.IsOptions(undefined)).is.false
   })
 
   it('HttpMethods.IsPatch => 正常', function() {
@@ -89,6 +104,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsPatch('PATCH')).is.true
     expect(HttpMethods.IsPatch('PATCH ')).is.false
     expect(HttpMethods.IsPatch('PATZH')).is.false
+    expect(HttpMethods.IsPatch('')).is.false
+    expect(HttpMethods.IsPatch(null)).is.false
+    expect(HttpMethods.IsPatch(undefined)).is.false
   })
 
   it('HttpMethods.IsPost => 正常', function() {
@@ -97,6 +115,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsPost('POST')).is.true
     expect(HttpMethods.IsPost('POST ')).is.false
     expect(HttpMethods.IsPost('past')).is.false
+    expect(HttpMethods.IsPost('')).is.false
+    expect(HttpMethods.IsPost(null)).is.false
+    expect(HttpMethods.IsPost(undefined)).is.false
   })
 
   it('HttpMethods.IsPut => 正常', function() {
@@ -105,6 +126,9 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsPut('PUT')).is.true
     expect(HttpMethods.IsPut('PUT ')).is.false
     expect(HttpMethods.IsPut('pat')).is.false
+    expect(HttpMethods.IsPut('')).is.false
+    expect(HttpMethods.IsPut(null)).is.false
+    expect(HttpMethods.IsPut(undefined)).is.false
   })
 
   it('HttpMethods.IsTrace => 正常', function() {
@@ -113,5 +137,8 @@ describe('/http/http-methods.ts', function() {
     expect(HttpMethods.IsTrace('TRACE')).is.true
     expect(HttpMethods.IsTrace('TRACE ')).is.false
     expect(HttpMethods.IsTrace('traze')).is.false
+    expect(HttpMethods.IsTrace('')).is.false
+    expect(HttpMethods.IsTrace(null)).is.false
+    expect(HttpMethods.IsTrace(undefined)).is.false
   })
 })
