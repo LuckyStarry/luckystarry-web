@@ -1,10 +1,10 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { IRouter } from '../../../src/web/routing/router'
-import { RouteContext } from '../../../src/web/routing/route-context'
-import { RouteData } from '../../../src/web/routing/route-data'
+import { IRouter } from '../../../src/routing/router'
+import { RouteContext } from '../../../src/routing/route-context'
+import { RouteData } from '../../../src/routing/route-data'
 
-describe('/web/routing/route-data.ts', function() {
+describe('/routing/route-data.ts', function() {
   it('存在 Class RouteData', function() {
     expect(typeof RouteData).to.equal('function')
   })

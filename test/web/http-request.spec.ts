@@ -2,7 +2,7 @@
 import { expect } from 'chai'
 import { HttpRequest, RequestMessage } from '../../src/http/http-request'
 
-describe('/web/http-request.ts', function() {
+describe('/http/http-request.ts', function() {
   it('存在 Class HttpRequest', function() {
     expect(typeof HttpRequest).to.equal('function')
   })

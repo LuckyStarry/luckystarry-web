@@ -1,12 +1,12 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { IRouter } from '../../../src/web/routing/router'
-import { RouteContext } from '../../../src/web/routing/route-context'
-import { RouteData } from '../../../src/web/routing/route-data'
-import { RouteDataSnapshot } from '../../../src/web/routing/route-data-snapshot'
+import { IRouter } from '../../../src/routing/router'
+import { RouteContext } from '../../../src/routing/route-context'
+import { RouteData } from '../../../src/routing/route-data'
+import { RouteDataSnapshot } from '../../../src/routing/route-data-snapshot'
 import { List } from 'luckystarry-collections'
 
-describe('/web/routing/route-data-snapshot.ts', function() {
+describe('/routing/route-data-snapshot.ts', function() {
   it('存在 Class RouteDataSnapshot', function() {
     expect(typeof RouteDataSnapshot).to.equal('function')
   })

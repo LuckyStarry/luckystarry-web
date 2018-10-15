@@ -4,7 +4,7 @@ import { HttpContext } from '../../src/http/http-context'
 import { RequestMessage } from '../../src/http/http-request'
 import { ResponseMessage } from '../../src/http/http-response'
 
-describe('/web/http-context.ts', function() {
+describe('/http/http-context.ts', function() {
   it('存在 Class EventHandler', function() {
     expect(typeof HttpContext).to.equal('function')
   })

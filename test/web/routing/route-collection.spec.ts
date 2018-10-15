@@ -1,14 +1,14 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { IRouter } from '../../../src/web/routing/router'
-import { RouteCollection } from '../../../src/web/routing/route-collection'
-import { RouteContext } from '../../../src/web/routing/route-context'
+import { IRouter } from '../../../src/routing/router'
+import { RouteCollection } from '../../../src/routing/route-collection'
+import { RouteContext } from '../../../src/routing/route-context'
 import { HttpContext } from '../../../src/http/http-context'
 import { RequestMessage } from '../../../src/http/http-request'
 import { ResponseMessage } from '../../../src/http/http-response'
-import { RouteData } from '../../../src/web/routing/route-data'
+import { RouteData } from '../../../src/routing/route-data'
 
-describe('/web/routing/route-collection.ts', function() {
+describe('/routing/route-collection.ts', function() {
   it('存在 Class RouteCollection', function() {
     expect(typeof RouteCollection).to.equal('function')
   })
