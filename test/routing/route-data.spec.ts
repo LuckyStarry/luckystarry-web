@@ -1,8 +1,6 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { IRouter } from '../../../src/routing/router'
-import { RouteContext } from '../../../src/routing/route-context'
-import { RouteData } from '../../../src/routing/route-data'
+import { RouteContext, RouteData, IRouter } from '../../src/routing'
 
 describe('/routing/route-data.ts', function() {
   it('存在 Class RouteData', function() {

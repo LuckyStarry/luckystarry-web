@@ -1,22 +1,12 @@
 import http from 'http'
-import { IHttpModule } from './http-module'
 import { HttpContext } from '../http'
 import { EventHandler } from '../event-handler'
 import { PayloadEventArgs } from '../payload-event-args'
 
 export class HttpApplication {
   private server: http.Server
-  private modules: Array<IHttpModule>
-
-  public constructor() {
-    this.modules = Array<IHttpModule>()
-  }
 
   public Init(): void {
-    for (let module of this.modules) {
-      module.Init(this)
-    }
-
     this.server = http.createServer(
       (request: http.IncomingMessage, response: http.ServerResponse) => {
         let httpContext = new HttpContext({ request, response })
@@ -28,10 +18,6 @@ export class HttpApplication {
         this.PostRequestHandlerExecute.Trigger(this, eventArgs)
       }
     )
-  }
-
-  public RegisterModule(module: IHttpModule): void {
-    this.modules.push(module)
   }
 
   public Start(options?: { Port?: number }): void {

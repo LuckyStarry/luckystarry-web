@@ -1,10 +1,7 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { RouteContext } from '../../../src/routing/route-context'
-import { HttpContext } from '../../../src/http/http-context'
-import { RequestMessage } from '../../../src/http/http-request'
-import { ResponseMessage } from '../../../src/http/http-response'
-import { RouteData } from '../../../src/routing/route-data'
+import { RouteContext, RouteData } from '../../src/routing'
+import { HttpContext, RequestMessage, ResponseMessage } from '../../src/http'
 
 describe('/routing/route-context.ts', function() {
   it('存在 Class RouteContext', function() {

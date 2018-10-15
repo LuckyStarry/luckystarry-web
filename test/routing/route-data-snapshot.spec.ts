@@ -1,9 +1,11 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { IRouter } from '../../../src/routing/router'
-import { RouteContext } from '../../../src/routing/route-context'
-import { RouteData } from '../../../src/routing/route-data'
-import { RouteDataSnapshot } from '../../../src/routing/route-data-snapshot'
+import {
+  RouteContext,
+  RouteData,
+  IRouter,
+  RouteDataSnapshot
+} from '../../src/routing'
 import { List } from 'luckystarry-collections'
 
 describe('/routing/route-data-snapshot.ts', function() {

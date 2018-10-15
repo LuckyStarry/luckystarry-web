@@ -1,12 +1,12 @@
 /* tslint:disable */
 import { expect } from 'chai'
-import { IRouter } from '../../../src/routing/router'
-import { RouteCollection } from '../../../src/routing/route-collection'
-import { RouteContext } from '../../../src/routing/route-context'
-import { HttpContext } from '../../../src/http/http-context'
-import { RequestMessage } from '../../../src/http/http-request'
-import { ResponseMessage } from '../../../src/http/http-response'
-import { RouteData } from '../../../src/routing/route-data'
+import {
+  RouteContext,
+  RouteData,
+  IRouter,
+  RouteCollection
+} from '../../src/routing'
+import { HttpContext, RequestMessage, ResponseMessage } from '../../src/http'
 
 describe('/routing/route-collection.ts', function() {
   it('存在 Class RouteCollection', function() {

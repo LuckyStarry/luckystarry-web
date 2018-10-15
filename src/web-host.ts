@@ -1,8 +1,7 @@
 import http from 'http'
 import { WebHostBuilder } from './web-host-builder'
-import { IApplicationBuilder } from './application-builder'
-import { RequestDelegate } from './request-delegate'
-import { HttpContext } from './web'
+import { IApplicationBuilder, RequestDelegate } from './builder'
+import { HttpContext } from './http'
 
 export abstract class IWebHost {
   public abstract Start()

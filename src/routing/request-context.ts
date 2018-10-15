@@ -1,4 +1,4 @@
-import { HttpContext } from '../http-context'
+import { HttpContext } from '../http'
 import { RouteData } from './route-data'
 
 export class RequestContext {
